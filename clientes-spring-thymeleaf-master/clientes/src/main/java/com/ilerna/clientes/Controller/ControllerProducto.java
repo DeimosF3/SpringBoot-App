@@ -22,9 +22,9 @@ public class ControllerProducto {
     public String crud(Model model){
         String valorfinal="./producto/listarproducto";
         try {
-            model.addAttribute("clientes", gp.listar());
+            model.addAttribute("productos", gp.listar());
         } catch (SQLException ex) {
-            Logger.getLogger(ControllerCliente.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControllerProducto.class.getName()).log(Level.SEVERE, null, ex);
             valorfinal="error";
         }
         return valorfinal;
